@@ -1,7 +1,7 @@
 
 # Folder Synchronization
 
-This project is created create a backup folder that will be sincronized to the Sorce Folder ddepending on user input
+This aim of the project is to create a backup folder called "Replica" that will be synchronized to the "Sorce" Folder depending on user input
 
 
 ## Tech Stack
