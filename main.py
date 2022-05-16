@@ -36,11 +36,16 @@ except:
 
 # Time Interval calculation based on user input
 while True:
-    interval_type = input("The amount of time should be calculate in seconds, minutes or days ").lower()
+    interval_type = input("The amount of time should be calculate in seconds, minutes, hours or days ").lower()
 
     if interval_type == "days":
         time_interval = int(input(f"Insert the amount of {interval_type} "))
         sincro_delay = (time_interval * 86400)
+        break
+
+    if interval_type == "hours":
+        time_interval = int(input(f"Insert the amount of {interval_type} "))
+        sincro_delay = (time_interval * 3600)
         break
 
     elif interval_type == "minutes":
@@ -80,7 +85,5 @@ while True:
             with open(f'{log_file_path}', 'a') as log:
                 log.write(f"\n{date.datetime.now().strftime('%m/%d/%Y,%H:%M:%S')}, Removed file: {file}")
             print(f"{date.datetime.now().strftime('%m/%d/%Y,%H:%M:%S')} Removed file: {file}")
-
-
 
     time.sleep(sincro_delay)
